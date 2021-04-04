@@ -1,20 +1,3 @@
-/* -------------------------------------------------------------------
-                                               Bert G. Wachsmuth
-                                               10/28/96
-    Piano Library Implementation File
-    ---------------------------------
-
-This file contains the implementation of the functions whose protoypes
-are defined in "pianoutl.h". Please refer to that file for any
-explainations and examples for the individual public functions and
-constants.
-
-Note: This file defines a few private functions and constants that
-are not available to a main program that includes "pianoutl.h". These
-private functions are for 'internal' use of this implementation file
-only.
-------------------------------------------------------------------- */
-
 #include <dos.h>
 #include <conio.h>
 #include <iostream.h>
@@ -45,7 +28,7 @@ void DrawRectangle(int TopLeftVert,    int TopLeftHoriz,
    window(1,1,80,25);
 }
 
-// public functions (defined in "pianoutl.h")
+// public functions 
 
 char GetAKey()
 {
@@ -228,9 +211,4 @@ void CleanUp(void)
    ChangeWritingColorTo(WHITE);
    ChangeBackgroundColorTo(BLACK);
    ClearTheScreen();
-   cout << "\t\t****************************************************\n";
-   cout << "\t\t  This program courtesy of CSAS 1111 at Seton Hall *\n";
-   cout << "\t\t* University. Have a nice day ...                  *\n";
-   cout << "\t\t****************************************************\n";
-   cout << "\n";
 }
